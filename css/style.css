@@ -1,0 +1,144 @@
+/*
+*/
+.card-information form input {
+  height: 40px;
+  color: hsl(279, 6%, 55%);
+  border-radius: 8px;
+  border: 1px solid hsl(279, 6%, 55%);
+  padding-left: 8px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+}
+
+main {
+  background-color: hsl(0, 0%, 100%);
+}
+
+aside {
+  position: relative;
+}
+aside .back-Ofthe-Card {
+  width: 252px;
+  height: 140px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  position: absolute;
+  top: 32px;
+  left: 90px;
+}
+aside .back-Ofthe-Card .black-stripe {
+  background-color: hsl(278, 68%, 11%);
+  width: 252px;
+  height: 36px;
+  margin-top: 12px;
+}
+aside .back-Ofthe-Card .gray-stripe {
+  background-color: hsl(279, 6%, 55%);
+  width: 180px;
+  height: auto;
+  margin: 16px auto 0px auto;
+}
+aside .back-Ofthe-Card .gray-stripe p {
+  display: flex;
+  justify-content: end;
+  padding-right: 16px;
+  color: hsl(0, 0%, 100%);
+}
+
+.front-Ofthe-Card {
+  width: 252px;
+  height: 140px;
+  position: absolute;
+  top: 117px;
+  left: 32px;
+}
+.front-Ofthe-Card img {
+  width: 100%;
+  height: 100%;
+}
+.front-Ofthe-Card .circles-container {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 80px;
+  top: 0px;
+  left: 10px;
+  position: absolute;
+  justify-content: space-around;
+}
+.front-Ofthe-Card .circles-container .white-circle {
+  width: 40px;
+  height: 40px;
+  background-color: green;
+  border-radius: 50%;
+}
+.front-Ofthe-Card .circles-container .empty-circle {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border-radius: 50%;
+}
+.front-Ofthe-Card .card-number {
+  position: absolute;
+  top: 62px;
+  left: 20px;
+  letter-spacing: 3px;
+  color: hsl(0, 0%, 100%);
+}
+.front-Ofthe-Card .name {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  color: hsl(0, 0%, 100%);
+}
+.front-Ofthe-Card .expiration {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  color: hsl(0, 0%, 100%);
+}
+
+.card-information {
+  width: 90%;
+  margin: 52px auto 0px auto;
+}
+.card-information form {
+  display: flex;
+  flex-direction: column;
+}
+.card-information form .inputs-container {
+  display: flex;
+  justify-content: space-between;
+}
+.card-information form .inputs-container input:nth-child(-n+2) {
+  width: 68px;
+}
+.card-information form .inputs-container input:nth-child(3) {
+  width: 180px;
+}
+.card-information form label {
+  color: hsl(278, 68%, 11%);
+}
+.button-container {
+  width: 100%;
+}
+.button-container .primary-button {
+  width: 100%;
+  height: 40px;
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 8px;
+  color: hsl(0, 0%, 100%);
+  margin-top: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */

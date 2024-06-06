@@ -1,0 +1,160 @@
+$mobile-size: 375px;
+$desktop-size: 1440px;
+
+$Font-size: 18px;
+// @font-face {
+//     font-family: 'space-grotesk';
+//     src: url('fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+//     font-weight: 500;
+//     font-style: normal;
+// }
+
+$active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+$Red-error: hsl(0, 100%, 66%);
+
+$White: hsl(0, 0%, 100%);
+$Light-grayish-violet: hsl(270, 3%, 87%);
+$Dark-grayish-violet: hsl(279, 6%, 55%);
+$Very-dark-violet: hsl(278, 68%, 11%);
+/*
+*/
+%inputs{
+    height: 40px;
+    color: $Dark-grayish-violet;
+    border-radius: 8px;
+    border: 1px solid $Dark-grayish-violet;
+    padding-left: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: $Font-size;
+}
+main {
+  background-color: $White;
+}
+aside {
+  position: relative;
+  .back-Ofthe-Card {
+    width: 252px;
+    height: 140px;
+    background-color: $White;
+    border-radius: 8px;
+    position: absolute;
+    top: 32px;
+    left: 90px;
+
+    .black-stripe {
+      background-color: $Very-dark-violet;
+      width: 252px;
+      height: 36px;
+      margin-top: 12px;
+    }
+    .gray-stripe {
+      background-color: $Dark-grayish-violet;
+      width: 180px;
+      height: auto;
+      margin: 16px auto 0px auto;
+      p {
+        display: flex;
+        justify-content: end;
+        padding-right: 16px;
+        color: $White;
+      }
+    }
+  }
+}
+
+.front-Ofthe-Card {
+  width: 252px;
+  height: 140px;
+  position: absolute;
+  top: 117px;
+  left: 32px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .circles-container {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    width: 80px;
+    top: 0px;
+    left: 10px;
+    position: absolute;
+    justify-content: space-around;
+    .white-circle {
+      width: 40px;
+      height: 40px;
+      background-color: green;
+      border-radius: 50%;
+    }
+    .empty-circle {
+      width: 20px;
+      height: 20px;
+      background-color: blue;
+      border-radius: 50%;
+    }
+  }
+  .card-number {
+    position: absolute;
+    top: 62px;
+    left: 20px;
+    letter-spacing: 3px;
+    color: $White;
+  }
+  .name {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    color: $White;
+  }
+  .expiration {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+    color: $White;
+  }
+}
+.card-information {
+  width: 90%;
+  margin: 52px auto 0px auto;
+  form {
+    display: flex;
+    flex-direction: column;
+    .inputs-container {
+      display: flex;
+      justify-content: space-between;
+      input:nth-child(-n+2){
+        width: 68px;
+      }
+      input:nth-child(3){
+        width: 180px;
+      }
+    }
+    label {
+      color: $Very-dark-violet;
+    }
+    input{
+        @extend %inputs
+    }
+  }
+}
+.button-container{
+    width: 100%;
+    .primary-button{
+        width: 100%;
+        height: 40px;
+        background-color: $Very-dark-violet;
+        border-radius: 8px;
+        color: $White;
+        margin-top: 16px;
+    }
+}
