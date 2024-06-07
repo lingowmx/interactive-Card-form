@@ -8,6 +8,8 @@
   padding-left: 8px;
   margin-top: 12px;
   margin-bottom: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
 * {
@@ -18,14 +20,23 @@
 
 body {
   font-size: 18px;
+  font-family: "Space-Grotesk", sans-serif;
 }
 
 main {
   background-color: hsl(0, 0%, 100%);
 }
 
+.error {
+  color: hsl(0, 100%, 66%);
+  font-size: 12px;
+}
+
 aside {
   position: relative;
+}
+aside img {
+  width: 100%;
 }
 aside .back-Ofthe-Card {
   width: 252px;
@@ -43,14 +54,14 @@ aside .back-Ofthe-Card .black-stripe {
   margin-top: 12px;
 }
 aside .back-Ofthe-Card .gray-stripe {
+  display: flex;
+  justify-content: end;
   background-color: hsl(279, 6%, 55%);
   width: 180px;
   height: auto;
   margin: 16px auto 0px auto;
 }
 aside .back-Ofthe-Card .gray-stripe p {
-  display: flex;
-  justify-content: end;
   padding-right: 16px;
   color: hsl(0, 0%, 100%);
 }
@@ -92,7 +103,7 @@ aside .back-Ofthe-Card .gray-stripe p {
   position: absolute;
   top: 62px;
   left: 20px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   color: hsl(0, 0%, 100%);
 }
 .front-Ofthe-Card .name {
@@ -129,6 +140,10 @@ aside .back-Ofthe-Card .gray-stripe p {
 .card-information form label {
   color: hsl(278, 68%, 11%);
 }
+.card-information form input:focus {
+  outline-color: hsl(279, 6%, 55%);
+}
+
 .button-container {
   width: 100%;
 }
@@ -139,6 +154,81 @@ aside .back-Ofthe-Card .gray-stripe p {
   border-radius: 8px;
   color: hsl(0, 0%, 100%);
   margin-top: 16px;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  main {
+    width: 640px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    margin: 0;
+  }
+  aside {
+    padding-right: 180px;
+  }
+  aside .back-Ofthe-Card {
+    width: 400px;
+    height: 220px;
+    top: 462px;
+    left: 40px;
+  }
+  aside .back-Ofthe-Card .black-stripe {
+    width: 400px;
+    height: 44px;
+  }
+  aside .back-Ofthe-Card .gray-stripe {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  .card-information {
+    position: absolute;
+    width: 500px;
+    top: 260px;
+    left: 700px;
+  }
+  .card-information .inputs-container input:nth-child(-n+2) {
+    width: 80px;
+  }
+  .card-information .inputs-container input:nth-child(3) {
+    width: 200px;
+  }
+  .front-Ofthe-Card {
+    width: 400px;
+    height: 220px;
+    position: absolute;
+    top: 200px;
+    left: 112px;
+  }
+  .front-Ofthe-Card .circles-container {
+    height: 80px;
+    width: 100px;
+  }
+  .front-Ofthe-Card .circles-container .white-circle {
+    width: 60px;
+    height: 60px;
+  }
+  .front-Ofthe-Card .circles-container .empty-circle {
+    width: 30px;
+    height: 30px;
+  }
+  .front-Ofthe-Card .card-number {
+    top: 120px;
+    font-size: 30px;
+  }
+  .front-Ofthe-Card .name {
+    top: 180px;
+  }
+  .front-Ofthe-Card .expiration {
+    top: 180px;
+    left: 300px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

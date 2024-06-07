@@ -30,7 +30,17 @@
   <body>
     <main>
       <aside class="purple-aside">
-        <img src="./images/bg-main-mobile.png" alt="background" />
+        <picture>
+          <source
+            srcset="./images/bg-main-desktop.png"
+            media="(min-width:1024px)"
+          />
+          <source
+            srcset="./images/bg-main-mobile.png"
+            media="(min-width:375px)"
+          />
+          <img src="./images/bg-main-mobile.png" alt="background" />
+        </picture>
         <div class="back-Ofthe-Card">
           <div class="black-stripe"></div>
           <div class="gray-stripe">
@@ -59,11 +69,21 @@
             type="number"
             placeholder="e.g 1234 5431 3456 3332"
           />
-          <label for=""> EXP. DATE (MM/YY) CVC </label>
-          <div class="inputs-container">
-            <input type="number" placeholder="MM" />
-            <input type="number" placeholder="YY" />
-            <input type="number" placeholder="e.g. 123" />
+          <p class="error">Wrong format, number only</p>
+          <div class="inputs-main-container">
+            <div class="inputs-month-year">
+              <label for=""> EXP. DATE (MM/YY)</label>
+              <input id="month" type="number" placeholder="MM" />
+              <input id="year" type="number" placeholder="YY" />
+              <p class="error">Cant be blank</p>
+            </div>
+            <div class="input-private-container">
+              <label for="private">CVC</label>
+              <input id="private" type="number" placeholder="e.g. 123" />
+              <p class="error">Cant be blank</p>
+            </div>
+            <div class="inputs-container">
+            </div>
           </div>
         </form>
         <div class="button-container">
@@ -82,5 +102,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
