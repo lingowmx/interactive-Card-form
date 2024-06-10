@@ -62,32 +62,82 @@
       <section class="card-information">
         <form action="submit">
           <label for="name"> CARDHOLDER NAME </label>
-          <input id="name" type="text" placeholder="e.g. someone else" />
+          <input
+            id="name"
+            type="text"
+            placeholder="e.g. someone else"
+          />
+          <p class="error" id="required-name" style="display: none">
+            Cant be empty
+          </p>
           <label for="cardNumber"> CARD NUMBER </label>
           <input
             id="cardNumber"
-            type="number"
+            type="text"
             placeholder="e.g 1234 5431 3456 3332"
+         
+            maxlength="16"
+            required
           />
-          <p class="error">Wrong format, number only</p>
+          <p class="error" id="required-cardNumber" style="display: none">
+            Wrong format, number only
+          </p>
           <div class="inputs-main-container">
             <div class="inputs-month-year">
               <label for=""> EXP. DATE (MM/YY)</label>
-              <input id="month" type="number" placeholder="MM" />
-              <input id="year" type="number" placeholder="YY" />
-              <p class="error">Cant be blank</p>
+              <div class="twoInputs-container">
+                <input
+                  id="month"
+                  type="text"
+                  placeholder="MM"
+
+                  maxlength="2"
+                  required
+                />
+                <input
+                  id="year"
+                  type="text"
+                  placeholder="YY"
+
+                  maxlength="2"
+                  required
+                />
+              </div>
+              <p class="error" id="required-date" style="display: none">
+                Cant be blank
+              </p>
             </div>
             <div class="input-private-container">
               <label for="private">CVC</label>
-              <input id="private" type="number" placeholder="e.g. 123" />
-              <p class="error">Cant be blank</p>
+              <input
+                id="private"
+                type="text"
+                placeholder="e.g. 123"
+                maxlength="3"
+                required
+              />
+              <p class="error" id="required-password" style="display: none">
+                Cant be blank
+              </p>
             </div>
-            <div class="inputs-container">
-            </div>
+            <div class="inputs-container"></div>
           </div>
         </form>
         <div class="button-container">
           <button class="primary-button">Confirm</button>
+        </div>
+      </section>
+
+      <section class="success-module" style="display: none">
+        <div class="module-img-container">
+          <img src="./images/icon-complete.svg" alt="icon-complete" />
+        </div>
+        <div class="thanks-container">
+          <h2>THANK YOU!</h2>
+          <p>We've addes your card details</p>
+          <div class="button-container">
+            <button class="primary-button">Continue</button>
+          </div>
         </div>
       </section>
     </main>
@@ -102,6 +152,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>

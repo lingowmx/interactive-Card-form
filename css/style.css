@@ -1,14 +1,29 @@
+:root {
+  --red-error: hsl(0, 100%, 66%);
+  --normal-gray: hsl(279, 6%, 55%);
+}
+
 /*
 */
-.card-information form input {
+.card-information input {
   height: 40px;
   color: hsl(279, 6%, 55%);
   border-radius: 8px;
   border: 1px solid hsl(279, 6%, 55%);
   padding-left: 8px;
   margin-top: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.button-container .primary-button {
+  width: 100%;
+  height: 40px;
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 8px;
+  color: hsl(0, 0%, 100%);
+  margin-top: 16px;
   cursor: pointer;
 }
 
@@ -30,6 +45,7 @@ main {
 .error {
   color: hsl(0, 100%, 66%);
   font-size: 12px;
+  margin-bottom: 12px;
 }
 
 aside {
@@ -127,34 +143,47 @@ aside .back-Ofthe-Card .gray-stripe p {
   display: flex;
   flex-direction: column;
 }
-.card-information form .inputs-container {
+.card-information form .inputs-main-container {
   display: flex;
   justify-content: space-between;
 }
-.card-information form .inputs-container input:nth-child(-n+2) {
-  width: 68px;
+.card-information form .inputs-main-container .inputs-month-year {
+  display: flex;
+  flex-direction: column;
 }
-.card-information form .inputs-container input:nth-child(3) {
-  width: 180px;
+.card-information form .inputs-main-container .inputs-month-year input {
+  width: 80px;
 }
-.card-information form label {
+.card-information form .inputs-main-container .inputs-month-year .twoInputs-container {
+  display: flex;
+  justify-content: space-between;
+}
+.card-information form .inputs-main-container .input-private-container {
+  display: flex;
+  flex-direction: column;
+}
+.card-information label {
   color: hsl(278, 68%, 11%);
 }
-.card-information form input:focus {
+.card-information input:focus {
   outline-color: hsl(279, 6%, 55%);
 }
 
 .button-container {
   width: 100%;
 }
-.button-container .primary-button {
-  width: 100%;
-  height: 40px;
-  background-color: hsl(278, 68%, 11%);
-  border-radius: 8px;
-  color: hsl(0, 0%, 100%);
-  margin-top: 16px;
-  cursor: pointer;
+.success-module {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.thanks-container h2 {
+  margin: 12px;
 }
 
 @media (min-width: 640px) {

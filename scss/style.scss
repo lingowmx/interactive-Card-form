@@ -3,20 +3,18 @@ $medium-size: 640px;
 $desktop-size: 1440px;
 
 $Font-size: 18px;
-// @font-face {
-//     font-family: 'space-grotesk';
-//     src: url('fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
-//     font-weight: 500;
-//     font-style: normal;
-// }
 
 $active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
 $Red-error: hsl(0, 100%, 66%);
-
 $White: hsl(0, 0%, 100%);
 $Light-grayish-violet: hsl(270, 3%, 87%);
 $Dark-grayish-violet: hsl(279, 6%, 55%);
 $Very-dark-violet: hsl(278, 68%, 11%);
+
+:root{
+  --red-error: #{$Red-error};
+  --normal-gray: #{$Dark-grayish-violet};
+}
 /*
 */
 %inputs {
@@ -26,13 +24,22 @@ $Very-dark-violet: hsl(278, 68%, 11%);
   border: 1px solid $Dark-grayish-violet;
   padding-left: 8px;
   margin-top: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   letter-spacing: 2px;
   cursor: pointer;
 }
 %error-input {
   @extend %inputs;
   border: 1px solid $Red-error;
+}
+%primary-button {
+  width: 100%;
+  height: 40px;
+  background-color: $Very-dark-violet;
+  border-radius: 8px;
+  color: $White;
+  margin-top: 16px;
+  cursor: pointer;
 }
 
 * {
@@ -42,14 +49,15 @@ $Very-dark-violet: hsl(278, 68%, 11%);
 }
 body {
   font-size: $Font-size;
-  font-family: 'Space-Grotesk', sans-serif;
+  font-family: "Space-Grotesk", sans-serif;
 }
 main {
   background-color: $White;
 }
-.error{
-    color: $Red-error;
-    font-size: 12px;
+.error {
+  color: $Red-error;
+  font-size: 12px;
+  margin-bottom: 12px;
 }
 aside {
   position: relative;
@@ -144,37 +152,55 @@ aside {
   form {
     display: flex;
     flex-direction: column;
-    .inputs-container {
+    .inputs-main-container {
       display: flex;
       justify-content: space-between;
-      input:nth-child(-n + 2) {
-        width: 68px;
+      .inputs-month-year {
+        display: flex;
+        flex-direction: column;
+        input {
+          width: 80px;
+        }
+        .twoInputs-container {
+          display: flex;
+          justify-content: space-between;
+        }
       }
-      input:nth-child(3) {
-        width: 180px;
+      .input-private-container {
+        display: flex;
+        flex-direction: column;
       }
-    }
-    label {
-      color: $Very-dark-violet;
-    }
-    input {
-      @extend %inputs;
-    }
-    input:focus {
-      outline-color: $Dark-grayish-violet;
     }
   }
+  label {
+    color: $Very-dark-violet;
+  }
+  input {
+    @extend %inputs;
+  }
+  input:focus {
+    outline-color: $Dark-grayish-violet;
+  }
 }
+
 .button-container {
   width: 100%;
   .primary-button {
-    width: 100%;
-    height: 40px;
-    background-color: $Very-dark-violet;
-    border-radius: 8px;
-    color: $White;
-    margin-top: 16px;
-    cursor: pointer;
+    @extend %primary-button;
+  }
+}
+.success-module {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.thanks-container{
+  h2{
+    margin: 12px;
   }
 }
 
