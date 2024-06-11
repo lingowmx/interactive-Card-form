@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/lingowmx/interactive-Card-form)
-- Live Site URL: [Add live site URL here](https://lingowmx.github.io/interactive-Card-form/)
+- Solution URL: [Github url](https://github.com/lingowmx/interactive-Card-form)
+- Live Site URL: [Github pages](https://lingowmx.github.io/interactive-Card-form/)
 
 ## My process
 
