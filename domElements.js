@@ -6,6 +6,15 @@ export const inputElements = {
   inputCardNumber: document.querySelector("#cardNumber"),
   inputName: document.querySelector("#name"),
 };
+
+//display elements
+export const displayElements = {
+  displayCardHolder: document.getElementById('displayCardHolderName'),
+  displayCardNumber: document.getElementById('displayCardNumber'),
+  displayExpDateMonth: document.getElementById('displayExpirationDateMonth'),
+  displayExpDateYear: document.getElementById('displayExpirationDateYear'),
+  displayCVC: document.getElementById('displaycvc'),
+}
 //required Error elements
 export const requiredErrorElements = {
   name: document.querySelector("#required-name"),
@@ -16,7 +25,6 @@ export const requiredErrorElements = {
 
 //module
 export const successModule = document.querySelector(".success-module");
-
 //form
 export const form = document.querySelector('form');
 

@@ -6,6 +6,33 @@ import {
   button,
 } from "./domElements.js";
 import { validateForm } from "./validation.js";
+import { displayElements } from "./domElements.js";
+
+//display card holder
+inputElements.inputName.addEventListener("input", function (event) {
+  displayElements.displayCardHolder.textContent =
+    event.target.value || "CARD HOLDER NAME";
+});
+//display card number
+inputElements.inputCardNumber.addEventListener("input", function (event) {
+  let cardNumber = event.target.value.replace(/\s/g, "");
+  cardNumber = cardNumber.replace(/(\d{4})/g, "$1 ").trim();
+  event.target.value = cardNumber;
+  displayElements.displayCardNumber.textContent =
+    cardNumber || "1234 5678 9012 3456";
+});
+//display exp date MONTH
+inputElements.inputMonth.addEventListener("input", function (event) {
+  displayElements.displayExpDateMonth.textContent = event.target.value || "MM";
+});
+//display exp date YEAR
+inputElements.inputYear.addEventListener("input", function (event) {
+  displayElements.displayExpDateYear.textContent = event.target.value || "YY";
+});
+//display cvc
+inputElements.inputPrivate.addEventListener("input", function (event) {
+  displayElements.displayCVC.textContent = event.target.value || "123";
+});
 
 button.addEventListener("click", (event) => {
   event.preventDefault();
@@ -24,8 +51,8 @@ button.addEventListener("click", (event) => {
       inputElements.inputCardNumber,
       inputElements.inputCardNumber.value,
       requiredErrorElements.cardNumber,
-      16,
-      16
+      19,
+      19
     ) && allValid;
   allValid =
     validateForm(
@@ -51,6 +78,11 @@ button.addEventListener("click", (event) => {
       3,
       3
     ) && allValid;
+  if (allValid) {
+    successModule.style.display = "block";
+    form.style.display = "none";
+    button.style.display = "none";
+  }
 });
 
 console.log("hola");

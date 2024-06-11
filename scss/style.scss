@@ -11,7 +11,7 @@ $Light-grayish-violet: hsl(270, 3%, 87%);
 $Dark-grayish-violet: hsl(279, 6%, 55%);
 $Very-dark-violet: hsl(278, 68%, 11%);
 
-:root{
+:root {
   --red-error: #{$Red-error};
   --normal-gray: #{$Dark-grayish-violet};
 }
@@ -140,6 +140,7 @@ aside {
     color: $White;
   }
   .expiration {
+    display: flex;
     position: absolute;
     top: 100px;
     left: 200px;
@@ -198,8 +199,8 @@ aside {
   align-items: center;
   text-align: center;
 }
-.thanks-container{
-  h2{
+.thanks-container {
+  h2 {
     margin: 12px;
   }
 }
@@ -278,5 +279,11 @@ aside {
       top: 180px;
       left: 300px;
     }
+  }
+  .success-module {
+    width: 300px;
+    position: absolute;
+    top: 320px;
+    left: 600px;
   }
 }
